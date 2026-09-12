@@ -199,8 +199,14 @@
         .b2b-gallery img:hover { filter: grayscale(0%); transform: scale(1.03); border-color: var(--accent-gold); }
         
         /* CSS VIDEO RESPONSIVE YANG SUDAH DIPERBAIKI */
-        .b2b-video { width: 100%; max-width: 100%; aspect-ratio: 16/9; height: auto; border-radius: 12px; border: 1px solid var(--glass-border); margin-top: 1.5rem; margin-bottom: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.4); display: block; }
-
+        /* CSS RESPONSIVE VIDEO HACK YOUTUBE */
+        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin: 1.5rem 0 1rem 0; border: 1px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        
+        /* PEMANGKASAN PADDING DI MOBILE AGAR VIDEO LEBAR */
+        @media (max-width: 768px) {
+            .bento-item { padding: 1.2rem; } 
+        }
         .legal-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
         .legal-gallery img { width: 100%; aspect-ratio: 3/4; object-fit: cover; border-radius: 8px; border: 1px solid var(--glass-border); filter: sepia(30%) grayscale(40%); transition: 0.3s; }
         .legal-gallery img:hover { filter: sepia(0%) grayscale(0%); transform: translateY(-5px); border-color: var(--accent-cyan); }
@@ -305,8 +311,9 @@
             <p>Cultivated in the mineral-rich volcanic highlands of Sumatra. We supply Grade 1 to 5, specifically calibrated to <strong>Screen Size 17-19</strong>, ensuring ultimate extraction consistency for industrial roasteries and global coffee chains.</p>
             
             <!-- VIDEO TANPA WIDTH/HEIGHT -->
-            <iframe class="b2b-video" src="https://www.youtube.com/embed/X5dsPfwP68c" title="Kopi Farmer Nusantara Export Quality" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/X5dsPfwP68c?rel=0" title="Kopi Farmer Nusantara Export Quality" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
             <div class="b2b-gallery">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260912-080230_Gudang-Greenbeans-Robusta-Grade-1.webp" alt="Wholesale Sumatra Robusta Greenbeans" loading="lazy">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260912-080242_Sortir-Biji%20Kopi-Ekspor.webp" alt="Coffee Beans Sorting Process" loading="lazy">
@@ -322,8 +329,9 @@
             <p>Engineered for exceptional heat retention, smokeless burn, and minimal ash content. Manufactured from 100% mature coconut shells, ideal for heavy industrial metallurgy, briquette manufacturing, and premium <strong>global shisha markets</strong>.</p>
             
             <!-- VIDEO TANPA WIDTH/HEIGHT -->
-            <iframe class="b2b-video" src="https://www.youtube.com/embed/JrDkH8sVqS0?rel=0" title="Charcoal Processing Factory" frameborder="0" allowfullscreen loading="lazy"></iframe>
-            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/JrDkH8sVqS0?rel=0" title="Charcoal Processing Factory" allowfullscreen loading="lazy"></iframe>
+            </div>
             <div class="b2b-gallery">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260912-080230_Produksi-Briket-Shisha-Ekspor.webp" alt="Export Shisha Briquette Production" loading="lazy">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260912-080230_Pabrik-Arang-Batok-Kelapa-Premium.webp" alt="Premium Coconut Shell Charcoal Factory" loading="lazy">
@@ -339,8 +347,9 @@
             <p>Premium split and whole dried betel nuts (Areca Catechu) with a guaranteed quality yield of 85-90%. Hand-sorted and strictly oven-baked to eliminate moisture degradation and fungal growth during maritime transit.</p>
             
             <!-- VIDEO TANPA WIDTH/HEIGHT -->
-            <iframe class="b2b-video" src="https://www.youtube.com/embed/X5dsPfwP68c?rel=0" title="Betel Nut Harvesting" frameborder="0" allowfullscreen loading="lazy"></iframe>
-            
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/X5dsPfwP68c?rel=0" title="Betel Nut Harvesting" allowfullscreen loading="lazy"></iframe>
+            </div>
             <div class="b2b-gallery">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260912-080242_Pengecekan-Kualitas-Pinang-Ekspor.webp" alt="Export Betel Nut Quality Check" loading="lazy">
                 <img src="https://dongkrakusaha.com/gambarbebas/1142920260912-080242_Proses-Oven-Pinang-Kering-90-Persen.webp" alt="90 Percent Dried Betel Nut Oven Process" loading="lazy">
