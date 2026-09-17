@@ -21,7 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
 
-    <!-- PRODUCT JSON-LD GOD-TIER (NO ENTITY COLLISION) -->
+   <!-- PRODUCT JSON-LD GOD-TIER (NO ENTITY COLLISION) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org/",
@@ -32,14 +32,64 @@
         "https://dongkrakusaha.com/gambarbebas/1142920260912-080230_Produksi-Briket-Shisha-Ekspor.webp"
       ],
       "description": "Export-quality coconut shell charcoal and shisha briquettes. Featuring high fixed carbon (>75%), low ash (<2.5%), and smokeless burn. FOB Jakarta available.",
-      "brand": { "@type": "Brand", "name": "PT KOPI FARMER NUSANTARA" },
+      "sku": "KFN-CHARCOAL-001",
+      "mpn": "KFN-CC-26MM",
+      "brand": { 
+        "@type": "Brand", 
+        "name": "PT KOPI FARMER NUSANTARA" 
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "145"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Global Shisha & Metallurgy Distributors"
+        }
+      },
       "offers": {
         "@type": "AggregateOffer",
+        "url": "https://www.kopifarmernusantara.com/coconut-shell-charcoal.html",
         "priceCurrency": "USD",
+        "lowPrice": "950.00",
+        "highPrice": "1450.00",
+        "offerCount": "5",
         "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
         "shippingDetails": {
           "@type": "OfferShippingDetails",
-          "shippingRate": { "@type": "MonetaryAmount", "currency": "USD", "value": "0" }
+          "shippingRate": { 
+            "@type": "MonetaryAmount", 
+            "currency": "USD", 
+            "value": "0" 
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": ["US", "AE", "FR", "DE", "SA"]
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "1",
+              "maxValue": "5",
+              "unitCode": "d"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "14",
+              "maxValue": "30",
+              "unitCode": "d"
+            }
+          }
         }
       }
     }
